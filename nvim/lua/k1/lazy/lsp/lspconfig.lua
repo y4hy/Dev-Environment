@@ -99,14 +99,6 @@ return {
           capabilities = capabilities,
         })
       end,
-        ["omnisharp_mono"] = function()
-        lspconfig.omnisharp_mono.setup({
-          capabilities = capabilities,
-          -- Add any specific omnisharp_mono configuration here
-          cmd = { "omnisharp-mono" },  -- Ensure this points to the correct omnisharp-mono executable
-          -- Example: root_dir = lspconfig.util.root_pattern(".git", "*.sln"),
-        })
-      end,
     }))
   end,
 }
