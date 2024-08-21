@@ -1,1 +1,2 @@
-require("k1")
+require("yahya.core")
+require("yahya.lazy")
