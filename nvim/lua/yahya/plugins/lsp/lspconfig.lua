@@ -83,20 +83,6 @@ return {
 						},
 					})
 				end,
-
-				-- Set up configuration for omnisharp server like lua_ls
-				["omnisharp"] = function()
-					lspconfig["omnisharp"].setup({
-						capabilities = capabilities,
-						settings = {
-							omnisharp = {
-								formattingOptions = {
-									EnableEditorConfigSupport = true,
-								},
-							},
-						},
-					})
-				end,
 			})
 		)
 	end,
