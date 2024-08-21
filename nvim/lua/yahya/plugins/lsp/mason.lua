@@ -33,7 +33,6 @@ return {
 				"pyright",
 				"gopls",
 				"clangd",
-				"omnisharp",
 			},
 		})
 
