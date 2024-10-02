@@ -28,6 +28,8 @@ return {
 			-- list of servers for mason to install
 			ensure_installed = {
 				"html",
+        "tailwindcss",
+        "cssls",
 				"lua_ls",
 				"emmet_ls",
 				"pyright",
@@ -40,6 +42,8 @@ return {
 			ensure_installed = {
 				"prettier", -- prettier formatter
 				"stylua", -- lua formatter
+        "eslint", -- eslint formatter
+        "stylelint", -- stylelint formatter
 				"isort", -- python formatter
 				"black", -- python formatter
 				"pylint",

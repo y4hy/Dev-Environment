@@ -1,6 +1,6 @@
 return {
-    "slugbyte/lackluster.nvim",
+    "rockerBOO/boo-colorscheme-nvim",
     config = function ()
-        vim.cmd("colorscheme lackluster-dark") 
+        vim.cmd("colorscheme crimson_moonlight")
     end
 }
