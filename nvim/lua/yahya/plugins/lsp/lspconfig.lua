@@ -42,20 +42,21 @@ return {
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
 
-		-- set diagnostic severity filter to only show errors
 		vim.diagnostic.config(
 			{
+				underline = false,
+				undercurl = false,
 				virtual_text = {
-					severity = vim.diagnostic.severity.ERROR,
+					severity = { vim.diagnostic.severity.ERROR, vim.diagnostic.severity.WARN },
 				},
 				signs = {
-					severity = vim.diagnostic.severity.ERROR,
+					severity = { vim.diagnostic.severity.ERROR, vim.diagnostic.severity.WARN },
 				},
 				float = {
 					severity_sort = true,
-					source = "always",
+					source = true,
 					border = "rounded",
-					severity = vim.diagnostic.severity.ERROR,
+					severity = { vim.diagnostic.severity.WARN, vim.diagnostic.severity.ERROR },
 				},
 			},
 

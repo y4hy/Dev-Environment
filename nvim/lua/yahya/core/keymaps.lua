@@ -27,4 +27,9 @@ keymap.set("n", "<leader>nx", "<cmd>tabclose<CR>", { desc = "Close current tab" 
 keymap.set("n", "<leader>nm", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
 keymap.set("n", "<leader>nb", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 
+-- buffer management
 keymap.set("v", "<C-c>", '"+y')
+
+-- move selected lines
+keymap.set("v", "<C-k>", ":m '<-2<CR>gv=gv", { desc = "Move selected lines up" })
+keymap.set("v", "<C-j>", ":m '>+1<CR>gv=gv", { desc = "Move selected lines down" })
