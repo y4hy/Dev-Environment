@@ -33,3 +33,10 @@ keymap.set("v", "<C-c>", '"+y')
 -- move selected lines
 keymap.set("v", "<C-k>", ":m '<-2<CR>gv=gv", { desc = "Move selected lines up" })
 keymap.set("v", "<C-j>", ":m '>+1<CR>gv=gv", { desc = "Move selected lines down" })
+
+-- Copilot keymaps
+keymap.set("i", "<C-w>", "<Plug>(copilot-next)")
+keymap.set("i", "<C-b>", "<Plug>(copilot-previous)")
+keymap.set("i", "<C-s>", "<Plug>(copilot-suggest)")
+keymap.set("i", "<C-l>", "<Plug>(copilot-accept-line)")
+keymap.set("i", "<C-q>", "<Plug>(copilot-accept-word)")
