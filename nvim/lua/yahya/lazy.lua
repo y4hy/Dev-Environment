@@ -20,3 +20,4 @@ require("lazy").setup({ { import = "yahya.plugins" }, { import = "yahya.plugins.
     notify = false,
   },
 })
+
