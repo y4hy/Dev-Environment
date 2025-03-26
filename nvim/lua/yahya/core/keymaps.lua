@@ -28,22 +28,15 @@ keymap.set("n", "<A-Down>", ":resize +2<CR>")
 keymap.set("n", "<A-Right>", ":vertical resize -2<CR>")
 keymap.set("n", "<A-Left>", ":vertical resize +2<CR>")
 
-
 keymap.set("n", "<leader>nn", "<cmd>tabnew<CR>", { desc = "Open new tab" }) -- open new tab
 keymap.set("n", "<leader>nx", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -- close current tab
 keymap.set("n", "^", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) -- Alt-h
 keymap.set("n", "¬", "<cmd>tabn<CR>", { desc = "Go to next tab" }) -- Alt-l
 keymap.set("n", "<leader>o", ":tabnew ", { desc = "Open file in new tab" }) -- open file in new tab
-keymap.set("n", "<leader>1", "<cmd>tabn 1<CR>")
-keymap.set("n", "<leader>2", "<cmd>tabn 2<CR>")
-keymap.set("n", "<leader>3", "<cmd>tabn 3<CR>")
-keymap.set("n", "<leader>4", "<cmd>tabn 4<CR>")
-keymap.set("n", "<leader>5", "<cmd>tabn 5<CR>")
-keymap.set("n", "<leader>6", "<cmd>tabn 6<CR>")
-keymap.set("n", "<leader>7", "<cmd>tabn 7<CR>")
-keymap.set("n", "<leader>8", "<cmd>tabn 8<CR>")
-keymap.set("n", "<leader>9", "<cmd>tabn 9<CR>")
 
+for i = 1, 9 do
+    keymap.set("n", "<leader>" .. i, "<cmd>tabn " .. i .. "<CR>")
+end
 
 -- buffer management
 keymap.set("v", "<C-c>", '"+y')
@@ -51,10 +44,3 @@ keymap.set("v", "<C-c>", '"+y')
 -- move selected lines
 keymap.set("v", "<C-k>", ":m '<-2<CR>gv=gv", { desc = "Move selected lines up" })
 keymap.set("v", "<C-j>", ":m '>+1<CR>gv=gv", { desc = "Move selected lines down" })
-
--- Copilot keymaps
-keymap.set("i", "<C-w>", "<Plug>(copilot-next)")
-keymap.set("i", "<C-b>", "<Plug>(copilot-previous)")
-keymap.set("i", "<C-s>", "<Plug>(copilot-suggest)")
-keymap.set("i", "<C-l>", "<Plug>(copilot-accept-line)")
-keymap.set("i", "<C-q>", "<Plug>(copilot-accept-word)")
